@@ -11,3 +11,5 @@ services:
     command: python /app/server/run.py
     depends_on:
       - broker
+    volumes:
+      - .:/app/
