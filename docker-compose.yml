@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+
+  broker:
+    image: rabbitmq:3.11
+
+  server:
+    build:
+      context: .
+    command: python /app/server/run.py
+    depends_on:
+      - broker
